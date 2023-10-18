@@ -17,14 +17,30 @@ figure('Position', ...                 % Creates new figure
     windowDim(4)] )                    % sets height
 
 
-plot(L1,I1, 'LineWidth',2)
+h = plot(L1,I1);
 title('Bakgrundsbrus (lampa ej på)')
+ylabel("Intensitet [W/m^2]")
+xlabel('Våglängd [\lambda]', 'Interpreter','tex')
+set(h, 'LineWidth',1.5)
+set(gca, 'lineWidth', 2, 'fontsize', 20)
 waitAndReset(windowDim)
-plot(L2,I2, 'LineWidth',2)
+
+h = plot(L2,I2);
 title('väte spektrum (auto integreringstid)')
+ylabel("Intensitet [W/m^2]")
+xlabel('Våglängd [\lambda]', 'Interpreter','tex')
+set(h, 'LineWidth',1.5)
+set(gca, 'lineWidth', 2, 'fontsize', 20)
 waitAndReset(windowDim)
-plot(L3,I3, 'LineWidth',2)
+
+h = plot(L3,I3);
 title('väte spektrum (195ms integreringstid)')
+ylabel("Intensitet [W/m^2]")
+xlabel('Våglängd [\lambda]', 'Interpreter','tex')
+set(h, 'LineWidth',1.5)
+set(gca, 'lineWidth', 2, 'fontsize', 20)
+
+
 
 
 
