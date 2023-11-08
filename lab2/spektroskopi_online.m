@@ -15,6 +15,8 @@ bp = plot(data2(:,1),data2(:,2));
 set(bp,'lineWidth', 2)
 title('Bakgrundsspektrum för ett tomt rör')
 set(gca, 'fontsize', 20, 'linewidth', 2)
+ylabel('Intensitet');
+xlabel('Vågtal [cm^{-1}]', 'Interpreter','tex');
 waitfor(gcf)
 
 hold off
@@ -38,6 +40,7 @@ h(3) = line([Q_coords(1),Q_coords(1)] , [Q_low,Q_coords(2)]);hold on;
 % vågtal R1 och P1: 
 	% R1 - 2147.04646
 	% P1 - 2139.45312
+	% Q1 - 2143.24979
 % B och w0:
 	% B - 3.771002212581517e-23
 	% w0 (rad/s) - 4.022832619275761e+14
